@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Register</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{% static 'img/favicon.png' %}" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.pn'%}" />
+    <link rel="manifest" href="{% static 'manifest.webmanifest'%}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/register.css'%}" />
+  </head>
+  <body>
+    <header>
+    <img
+          class="logo"
+          alt="Omnifood logo"
+          src="{% static 'img/omnifood-logo.png'%}"
+        />
+    </header>
+    <center>
+    <div class="container">
+    <div class="banner">
+        <img src="{% static 'img/foods/banner2.jpg'%} " style="object-fit: cover; width: 100%; height: 100%;"/>
+      </div>
+      <div class="outline">
+        <form action="." method="POST"">
+          {% csrf_token %} {{form.as_p}}
+          <input type="submit" value="Register" />
+        </form>
+      </div>
+      <div class="banner">
+        <img src="{% static 'img/foods/banner2.jpg'%}" style="object-fit: cover; width: 100%; height: 100%;"/>
+      </div>
+      </div>
+    </center>
+  </body>
+</html>
